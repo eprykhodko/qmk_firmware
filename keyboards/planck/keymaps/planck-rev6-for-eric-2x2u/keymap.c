@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS,    LT(3, KC_SPC),                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
 
-	[3] = LAYOUT_planck_2x2u(KC_ASTG, KC_NO,   RGB_VAI, RGB_VAD, KC_NO, KC_NO, KC_NO, KC_NO, KC_VOLU, KC_NO, RSFT(KC_PSCR), KC_NO,
+	[3] = LAYOUT_planck_2x2u(KC_ASTG, KC_NO,   RGB_VAI, RGB_VAD, KC_NO, KC_NO, KC_NO, KC_NO, KC_VOLU, KC_NO, KC_PSCR, KC_NO,
                            KC_TRNS, RGB_TOG, RGB_MOD, RGB_RMOD, KC_NO, KC_NO, KC_NO, KC_MPLY, KC_VOLD, KC_MUTE, KC_NO,  KC_TRNS,
                            KC_TRNS, NK_TOGG, RGB_HUI, RGB_HUD, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS,
                            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS)
