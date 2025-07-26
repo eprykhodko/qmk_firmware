@@ -51,7 +51,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT_planck_2x2u(KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I,    KC_O,   KC_P,    KC_BSPC,
                              KC_ESC,  KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K,    KC_L,   KC_SCLN, KC_QUOT,
-                             KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_SFTENT,
+                             KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, SC_SENT,
                              KC_LCTL, KC_LGUI, LALT_T(KC_CAPS), KC_LALT,         LT(2, KC_BSPC),     LT(1, KC_SPC),          KC_RALT, KC_APP, KC_RGUI, KC_RCTL),
 
     [1] = LAYOUT_planck_2x2u(KC_GRV,  KC_NO,   KC_NO,   KC_LCBR, KC_RCBR, KC_NO, KC_NO, KC_PGUP, KC_UP,   KC_PGDN, KC_NO, KC_DEL,
@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                              KC_TRNS, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                              KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,               KC_TRNS,   LT(3, KC_SPC),            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
 
-	[3] = LAYOUT_planck_2x2u(KC_ASTG, KC_NO,   RGB_VAI, RGB_VAD,  KC_NO, KC_NO, KC_NO, KC_MPRV, KC_VOLU, KC_MNXT, KC_PSCR, KC_NO,
+	[3] = LAYOUT_planck_2x2u(AS_TOGG, KC_NO,   RGB_VAI, RGB_VAD,  KC_NO, KC_NO, KC_NO, KC_MPRV, KC_VOLU, KC_MNXT, KC_PSCR, KC_NO,
                              KC_TRNS, RGB_TOG, RGB_MOD, RGB_RMOD, KC_NO, KC_NO, KC_NO, KC_MPLY, KC_VOLD, KC_MUTE, KC_NO,  KC_TRNS,
                              KC_TRNS, NK_TOGG, RGB_HUI, RGB_HUD,  KC_NO, KC_NO, KC_NO, TG(4),   KC_NO,   KC_TRNS, KC_TRNS, KC_TRNS,
                              KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS), 
