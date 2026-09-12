@@ -85,15 +85,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                              KC_TRNS, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                              KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,               KC_TRNS,   LT(_FUNCTION, KC_SPC),            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
 
-	[_FUNCTION] = LAYOUT_planck_2x2u(AS_TOGG, KC_NO,   RGB_VAI, RGB_VAD,  KC_NO, KC_NO, KC_NO, KC_MPRV, KC_VOLU, KC_MNXT, KC_PSCR, KC_NO,
-                             KC_TRNS, RGB_TOG, RGB_MOD, RGB_RMOD, KC_NO, KC_NO, KC_NO, KC_MPLY, KC_VOLD, KC_MUTE, KC_NO,  KC_TRNS,
-                             KC_TRNS, NK_TOGG, RGB_HUI, RGB_HUD,  PDF(_MACOS_BASE), PDF(_WINDOWS_BASE), PDF(_LINUX_BASE), TG(_MOUSE),   KC_NO,   KC_TRNS, KC_TRNS, KC_TRNS,
+	[_FUNCTION] = LAYOUT_planck_2x2u(AS_TOGG, KC_NO,   UG_VALU, UG_VALD,  KC_NO, KC_NO, KC_NO, KC_MPRV, KC_VOLU, KC_MNXT, KC_PSCR, KC_NO,
+                             KC_TRNS, UG_TOGG, UG_NEXT, UG_PREV, KC_NO, KC_NO, KC_NO, KC_MPLY, KC_VOLD, KC_MUTE, KC_NO,  KC_TRNS,
+                             KC_TRNS, NK_TOGG, UG_HUEU, UG_HUED,  PDF(_MACOS_BASE), PDF(_WINDOWS_BASE), PDF(_LINUX_BASE), TG(_MOUSE),   KC_NO,   KC_TRNS, KC_TRNS, KC_TRNS,
                              KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
 
-    [_MOUSE] = LAYOUT_planck_2x2u(KC_TRNS, KC_ACL0, KC_ACL1, KC_ACL2,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MS_U, KC_TRNS, KC_TRNS, KC_TRNS,
-                             TG(_MOUSE),   KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS, KC_TRNS,
+    [_MOUSE] = LAYOUT_planck_2x2u(KC_TRNS, MS_ACL0, MS_ACL1, MS_ACL2,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MS_UP, KC_TRNS, KC_TRNS, KC_TRNS,
+                             TG(_MOUSE),   KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, MS_LEFT, MS_DOWN, MS_RGHT, KC_TRNS, KC_TRNS,
                              KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                KC_BTN2, KC_BTN1,          KC_BTN3, KC_TRNS, KC_TRNS, KC_TRNS)
+                             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                MS_BTN2, MS_BTN1,          MS_BTN3, KC_TRNS, KC_TRNS, KC_TRNS)
 };
 
 void keyboard_post_init_user(void) {
