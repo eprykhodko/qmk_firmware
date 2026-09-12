@@ -34,7 +34,8 @@ const uint8_t PROGMEM encoder_hand_swap_config[NUM_ENCODERS] = {0};
 #    endif
 #endif
 
-const uint8_t music_map[MATRIX_ROWS][MATRIX_COLS] = {
+// Weak so keymaps (e.g. 2x2u) can override the default grid map.
+__attribute__((weak)) const uint8_t music_map[MATRIX_ROWS][MATRIX_COLS] = {
     {36, 37, 38, 39, 40, 41},
     {24, 25, 26, 27, 28, 29},
     {12, 13, 14, 15, 16, 17},
