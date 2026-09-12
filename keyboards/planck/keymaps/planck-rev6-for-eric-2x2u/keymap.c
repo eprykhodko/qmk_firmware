@@ -13,10 +13,11 @@
 enum layer_names {
     _LINUX_BASE,    // Layer 0 - Linux base layer
     _WINDOWS_BASE,  // Layer 1 - Windows base layer
-    _SYMBOLS,       // Layer 2 - Symbols and navigation
-    _NUMBERS,       // Layer 3 - Numbers and function keys
-    _FUNCTION,      // Layer 4 - Function keys and RGB controls
-    _MOUSE          // Layer 5 - Mouse layer
+    _MACOS_BASE,    // Layer 2 - macOS base layer
+    _SYMBOLS,       // Layer 3 - Symbols and navigation
+    _NUMBERS,       // Layer 4 - Numbers and function keys
+    _FUNCTION,      // Layer 5 - Function keys and RGB controls
+    _MOUSE          // Layer 6 - Mouse layer
 };
 
 const rgblight_segment_t PROGMEM capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -68,6 +69,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                              KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, SC_SENT,
                              KC_LCTL, KC_LGUI, LALT(KC_LSFT), KC_LALT,         LT(_NUMBERS, KC_BSPC),     LT(_SYMBOLS, KC_SPC),          KC_RALT, KC_APP, KC_RGUI, KC_RCTL),
 
+    // macOS: Opt/Cmd swapped vs Linux so Cmd sits next to thumbs; Cmd-tap Caps on the inner left mod
+    [_MACOS_BASE] = LAYOUT_planck_2x2u(KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I,    KC_O,   KC_P,    KC_BSPC,
+                             KC_ESC,  KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K,    KC_L,   KC_SCLN, KC_QUOT,
+                             KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, SC_SENT,
+                             KC_LCTL, KC_LALT, LGUI_T(KC_CAPS), KC_LGUI,         LT(_NUMBERS, KC_BSPC),     LT(_SYMBOLS, KC_SPC),          KC_RGUI, KC_APP, KC_RALT, KC_RCTL),
+
     [_SYMBOLS] = LAYOUT_planck_2x2u(KC_GRV,  KC_NO,   KC_NO,   KC_LCBR, KC_RCBR, KC_NO, KC_NO, KC_PGUP, KC_UP,   KC_PGDN, KC_NO, KC_DEL,
                              KC_TRNS, KC_NO,   KC_NO,   KC_LPRN, KC_RPRN, KC_NO, KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_NO, KC_TRNS,
                              KC_TRNS, KC_NO,   KC_NO,   KC_LBRC, KC_RBRC, KC_NO, KC_NO, KC_HOME, KC_NO,   KC_END,  KC_NO, KC_TRNS,
@@ -80,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	[_FUNCTION] = LAYOUT_planck_2x2u(AS_TOGG, KC_NO,   RGB_VAI, RGB_VAD,  KC_NO, KC_NO, KC_NO, KC_MPRV, KC_VOLU, KC_MNXT, KC_PSCR, KC_NO,
                              KC_TRNS, RGB_TOG, RGB_MOD, RGB_RMOD, KC_NO, KC_NO, KC_NO, KC_MPLY, KC_VOLD, KC_MUTE, KC_NO,  KC_TRNS,
-                             KC_TRNS, NK_TOGG, RGB_HUI, RGB_HUD,  KC_NO, DF(_WINDOWS_BASE), DF(_LINUX_BASE), TG(_MOUSE),   KC_NO,   KC_TRNS, KC_TRNS, KC_TRNS,
+                             KC_TRNS, NK_TOGG, RGB_HUI, RGB_HUD,  PDF(_MACOS_BASE), PDF(_WINDOWS_BASE), PDF(_LINUX_BASE), TG(_MOUSE),   KC_NO,   KC_TRNS, KC_TRNS, KC_TRNS,
                              KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
 
     [_MOUSE] = LAYOUT_planck_2x2u(KC_TRNS, KC_ACL0, KC_ACL1, KC_ACL2,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MS_U, KC_TRNS, KC_TRNS, KC_TRNS,
