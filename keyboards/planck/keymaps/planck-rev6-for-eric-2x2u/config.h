@@ -69,5 +69,5 @@
 
 // Mouse movements
 #define MOUSEKEY_INERTIA
-#define MOUSEKEY_MAX_SPEED 24  // default is 32
-#define MOUSEKEY_TIME_TO_MAX 50 // default is 32
+#define MOUSEKEY_MAX_SPEED 30  // default is 32
+#define MOUSEKEY_TIME_TO_MAX 40 // default is 32
